@@ -67,15 +67,15 @@
             
                     <div class="education-item left">
                         <p>High School</p>
-                        <p>XYZ High School</p>
-                        <p>Graduated: 2015</p>
+                        <p>St Anthony's Boys High School</p>
+                        <p>Graduated: 2011</p>
                     </div>
-                    <div class="year" style="top: 70px;">2015</div>
+                    <div class="year" style="top: 70px;">2011</div>
             
                     <div class="education-item right">
-                        <p>Bachelor of Science in Computer Science</p>
-                        <p>ABC University</p>
-                        <p>Graduated: 2018</p>
+                        <p>Bachelor of Science in Economics and Statistics</p>
+                        <p>Laikipia University</p>
+                        <p>Graduated: 2016</p>
                     </div>
                     <div class="year" style="top: 220px;">2018</div>
             
@@ -87,16 +87,17 @@
                     <div class="year" style="top: 370px;">2021</div>
                 </div>
                 <div class="cv-download">
-                    <button class="download-button" onclick="location.href='your-cv-link.pdf'">Download My CV</button>
+                    <button class="download-button" onclick="location.href='documents/BARSIL_CV.pdf'">Download My CV</button>
                 </div>
             </div>
             <div class="portfolio-container">
+                <div class="portfolio-heading">PORTFOLIO</div>
                 <div class="carousel">
                     <div class="carousel-image">
-                        <img src="your-image1.jpg" alt="Project Image">
+                        <img src="images/yolomy.PNG" alt="Project Image">
                         <div class="project-info">
-                            <h2>Project Title 1</h2>
-                            <p>Brief description of the project.</p>
+                            <h2>YOLOMY</h2>
+                            <p>This a static landing page for Yolomy store..</p>
                         </div>
                     </div>
                     <div class="carousel-buttons">
@@ -106,19 +107,50 @@
                 </div>
                 <div class="thumbnails">
                     <div class="thumbnail active">
-                        <img src="your-image1.jpg" alt="Thumbnail 1">
+                        <img src="images/yolomy.PNG" alt="Thumbnail 1">
                     </div>
                     <div class="thumbnail">
-                        <img src="your-image2.jpg" alt="Thumbnail 2">
+                        <img src="images/cloudshamba.PNG" alt="Thumbnail 2">
                     </div>
                     <div class="thumbnail">
-                        <img src="your-image3.jpg" alt="Thumbnail 3">
+                        <img src="images/pizzariba.PNG" alt="Thumbnail 3">
                     </div>
                     <div class="thumbnail">
                         <img src="your-image4.jpg" alt="Thumbnail 4">
                     </div>
                 </div>
-            </div> 
+            </div>
+            <div class="contact-container">
+                <div class="card">
+                <img src="images/barsil.png" style="width: 100%;">
+                <h1>Barsil Odiwuor Ochola</h1>
+                <p class="title">Web Developer</p>
+                <p>Android Developer</p>
+                <div style="margin: 24px 0;">
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Contact Me</h2>
+                    <form action="submit_form.php" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+             
         </div>
     </div>
+    <script src="js/portfolio.js"></script>
 </body>

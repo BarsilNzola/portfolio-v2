@@ -6,19 +6,21 @@ html, body {
 }
 
 .main-container {
-    background-color: #000000; /* Pitch Black */
+    background-color: #ADD8E6; /* Light Blue */
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+    margin: 0;
     padding-top: 20px; /* Space at the top for content */
+    padding-bottom: 40px;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #000000; /* Match outer container background */
+    background-color: #ADD8E6; /* Light Blue */
     color: #F4A261; /* Gold font color */
     font-family: 'Montserrat', sans-serif; /* Unique font family */
     text-align: center; /* Center the navbar items */
@@ -43,7 +45,7 @@ html, body {
     padding: 0;
     width: 95%; /* Stretch almost entirely across the outer container */
     max-width: 100%; /* Ensure it doesn't shrink unexpectedly */
-    border: 2px solid gold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow to create a raised effect */
     border-radius: 15px;
     background-color: transparent;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
@@ -58,7 +60,10 @@ html, body {
     justify-content: center; /* Center the left and right content */
     align-items: center;
     padding: 0 100px;
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     box-sizing: border-box;
 }
 
@@ -327,21 +332,32 @@ html, body {
     background-color: #1D3557; /* Navy Blue */
 }
 
-.carousel {
-    position: relative;
+.portfolio-heading {
+    position: absolute;
+    top: 20px;
     width: 100%;
-    height: 80%;
+    text-align: center;
+    font-size: 2rem;
+    color: #F4A261; /* Gold */
+    z-index: 3;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .carousel-image {
-    position: relative;
+    position: aabsolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }
 
 .carousel-image img {
@@ -353,12 +369,14 @@ html, body {
 
 .project-info {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     left: 20px;
     color: #F4A261; /* Gold */
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
+    width: 300px; /* Fixed width */
+    max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
 }
 
 .carousel-buttons {
@@ -384,6 +402,7 @@ html, body {
     right: 20px;
     display: flex;
     gap: 10px;
+    z-index: 2;
 }
 
 .thumbnail {
@@ -405,4 +424,66 @@ html, body {
     border-color: #F4A261; /* Gold */
 }
 
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #1D3557; /* Navy Blue */
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+
+.contact-form {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: #F4A261; /* Gold */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #F4A261; /* Gold */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #1D3557;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #1D3557; /* Navy Blue */
+    color: #F4A261; /* Gold */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.contact-form button:hover {
+    background-color: #F4A261; /* Gold */
+    color: #1D3557; /* Navy Blue */
+}
 
