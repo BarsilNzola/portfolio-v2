@@ -6,7 +6,7 @@ html, body {
 }
 
 .main-container {
-    background-color: #ADD8E6; /* Light Blue */
+    background-color: #6B9080; /* Muted Teal */
     width: 100%;
     min-height: 100vh; 
     display: flex;
@@ -20,9 +20,9 @@ html, body {
 
 /* Navbar */
 .navbar {
-    background-color: #ADD8E6; /* Light Blue */
+    background-color: #6B9080; /* Muted Teal */
     color: #F4A261; /* Gold font color */
-    font-family: 'Montserrat', sans-serif; /* Unique font family */
+    font-family: 'Poppins', sans-serif;
     text-align: center; /* Center the navbar items */
     padding: 10px 0;
 }
@@ -73,7 +73,7 @@ html, body {
 }
 
 .left-content h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -160,13 +160,13 @@ html, body {
 }
 
 .second-container h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
 .second-container p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     max-width: 800px; /* Control the width of the paragraph */
     margin-bottom: 40px;
@@ -174,7 +174,7 @@ html, body {
 }
 
 .second-container h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
@@ -189,6 +189,7 @@ html, body {
 .skill-box {
     background-color: #1D3557; /* Navy Blue */
     color: #F4A261;
+    font-family: 'Poppins', sans-serif;
     width: 150px;
     height: 150px;
     display: flex;
@@ -283,6 +284,7 @@ html, body {
     background-color: #F4A261; /* Gold */
     border-radius: 10px;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
     color: #1D3557; /* Navy Blue */
     position: relative;
     z-index: 2;
@@ -337,6 +339,7 @@ html, body {
     top: 20px;
     width: 100%;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: #F4A261; /* Gold */
     z-index: 3;
@@ -372,6 +375,7 @@ html, body {
     bottom: 70px;
     left: 20px;
     color: #F4A261; /* Gold */
+    font-family: 'Poppins', sans-serif;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
@@ -487,3 +491,31 @@ html, body {
     color: #1D3557; /* Navy Blue */
 }
 
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .container {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .project-info {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .thumbnails {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .thumbnail {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cv-download .download-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
