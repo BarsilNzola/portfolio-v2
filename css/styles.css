@@ -527,43 +527,37 @@ html, body {
   }
 
     /* Education container adjustments */
-  .education-container {
-    padding: 20px;
-  }
+    .education-container {
+        padding: 15px 10px; /* Reduce padding for a more compact layout */
+    }
 
-  /* Stack the year and education item vertically */
-  .education-item {
-    display: block; /* Stack items */
-    width: 100%; /* Full width for each item */
-    margin-bottom: 20px; /* Add space between education items */
-  }
+    .education-item.left p, .education-item.right p {
+        font-size: 9px; /* Reduce the font size of the paragraphs inside left and right items */
+    }
 
-  /* Align the year on top of the item for mobile */
-  .education-year {
-    text-align: center; /* Center the year text */
-    margin-bottom: 10px; /* Add space below the year */
-  }
+    .education-year {
+        width: 50px;
+        height: 50px;
+        font-size: 0.9rem; /* Reduce the size of the year circles */
+        line-height: 50px;
+    }
 
-  /* Style the education boxes */
-  .education-box {
-    width: 100%; /* Full width for the education box */
-    margin: 0 auto; /* Center the box */
-    padding: 10px; /* Ensure enough padding */
-  }
+    .education-line {
+        width: 2px; /* Keep the timeline line thin */
+        left: 50%; /* Center the line properly */
+        transform: translateX(-50%);
+    }
 
-  /* Adjust text sizes */
-  .education-box h4 {
-    font-size: 16px; /* Smaller font size for headings */
-  }
+    .education-box p {
+        font-size: 0.9rem; /* Reduce the font size inside the boxes */
+    }
 
-  .education-box p {
-    font-size: 14px; /* Smaller paragraph font size */
-  }
-
-  /* Optional: Improve spacing between the years and education boxes */
-  .education-item + .education-item {
-    margin-top: 30px; /* Add more space between each item */
-  }
+    /* Additional adjustments if necessary */
+    .education-heading {
+        font-size: 1.5rem; /* Adjust the heading size for better display on mobile */
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
    /* Portfolio Container Styles */
     .portfolio-container {
