@@ -491,31 +491,143 @@ html, body {
     color: #1D3557; /* Navy Blue */
 }
 
-@media (max-width: 768px) {
-    /* Adjustments for smaller screens */
-    .container {
+/* Extra small devices (phones, 0px - 576px) */
+@media (max-width: 576px) {
+    .first-container, .second-container, .contact-container {
         padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .left-content, .right-content, .contact-form, .card {
+        max-width: 100%;
+    }
+    
+    .contact-form, .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .highlight-name {
+        font-size: 2.5rem;
+    }
+    
+    .contact-button {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .navbar {
         font-size: 0.9rem;
     }
 
+    .education-item, .timeline-item {
+        width: 90%;
+        transform: translateX(0);
+        margin-bottom: 30px;
+    }
+
+    .portfolio-heading {
+        font-size: 1.5rem;
+    }
+
     .project-info {
-        width: 100%;
+        width: 90%;
+        padding: 5px;
+    }
+    
+    .social-icons {
         font-size: 1rem;
     }
 
+    .carousel-buttons {
+        gap: 5px;
+    }
+    
     .thumbnails {
-        bottom: 10px;
-        right: 10px;
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
-    .thumbnail {
-        width: 40px;
-        height: 40px;
+    .skill-box {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Small devices (portrait tablets, 576px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .left-content, .right-content {
+        max-width: 100%;
+    }
+    
+    .highlight-name {
+        font-size: 2.8rem;
     }
 
-    .cv-download .download-button {
-        width: 100%;
+    .contact-button {
+        padding: 12px;
+    }
+
+    .skill-box {
+        width: 120px;
+        height: 120px;
+    }
+
+    .timeline-item {
+        gap: 40px;
+    }
+
+    .education-item {
+        width: 80%;
+    }
+
+    .project-info {
+        width: 60%;
+    }
+
+    .carousel-buttons {
+        padding: 5px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .first-container {
+        padding: 50px;
+    }
+
+    .second-container {
+        padding: 20px 50px;
+    }
+
+    .highlight-name {
+        font-size: 3rem;
+    }
+
+    .contact-button {
+        padding: 15px 25px;
+    }
+
+    .education-item {
+        width: 60%;
+    }
+    
+    .skill-box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .project-info {
+        width: 50%;
+    }
+    
+    .carousel-buttons button {
         padding: 15px;
-        font-size: 1rem;
     }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 993px) {
+    /* Adjustments for larger screens */
 }
