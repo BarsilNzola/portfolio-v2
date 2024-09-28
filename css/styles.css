@@ -491,139 +491,139 @@ html, body {
     color: #1D3557; /* Navy Blue */
 }
 
-/* Extra small devices (phones, 0px - 576px) */
-@media (max-width: 576px) {
-    .first-container, .second-container, .contact-container {
-        padding: 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .left-content, .right-content, .contact-form, .card {
-        max-width: 100%;
-    }
-    
-    .contact-form, .card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .highlight-name {
-        font-size: 2.5rem;
-    }
-    
-    .contact-button {
-        width: 100%;
-        padding: 15px;
-    }
-    
+/* Base styles already defined... */
+
+/* Media Query for Small Screens (Mobile) */
+@media (max-width: 768px) {
     .navbar {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Adjust font size */
     }
 
-    .education-item, .timeline-item {
-        width: 90%;
-        transform: translateX(0);
-        margin-bottom: 30px;
+    .inner-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    .portfolio-heading {
-        font-size: 1.5rem;
+    .first-container,
+    .second-container,
+    .education-container,
+    .portfolio-container,
+    .contact-container {
+        height: auto; /* Allow sections to expand as needed */
+        padding: 20px;
     }
 
-    .project-info {
-        width: 90%;
-        padding: 5px;
+    /* Stack left and right content vertically */
+    .first-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Less padding */
     }
-    
+
+    .left-content, .right-content {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .left-content h1 {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .right-content {
+        margin-top: 20px;
+    }
+
     .social-icons {
-        font-size: 1rem;
+        position: static; /* Remove absolute positioning */
+        flex-direction: row; /* Place icons horizontally */
+        justify-content: center;
+    }
+
+    /* Second Container */
+    .second-container h2 {
+        font-size: 2.5rem; /* Smaller heading */
+    }
+
+    .second-container p {
+        font-size: 1rem; /* Smaller paragraph */
+    }
+
+    /* Skill Boxes Adjustments */
+    .skill-box {
+        width: calc(50% - 10px); /* Stack two skills per row */
+        height: 130px;
+    }
+
+    /* Ensure skills stack in one column on small screens */
+    @media (max-width: 500px) {
+        .skill-box {
+            width: calc(100% - 20px); /* One per row */
+        }
+    }
+
+    /* Education Section Adjustments */
+    .timeline-item {
+        flex-direction: column; /* Stack vertically */
+        align-items: flex-start;
+    }
+
+    .year {
+        position: relative; /* Remove absolute positioning */
+        transform: translateX(0); /* Center on its own */
+    }
+
+    .education-item.left, .education-item.right {
+        width: 90%; /* Full width on mobile */
+        margin: 20px 0; /* Space between items */
+        text-align: center; /* Centered text */
+        transform: translateX(0); /* Remove side shift */
+    }
+
+    /* Portfolio Container Adjustments */
+    .portfolio-heading {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .carousel-image img {
+        object-fit: cover; /* Ensure images are not stretched */
+    }
+
+    .thumbnails {
+        position: static; /* Remove fixed positioning */
+        justify-content: center; /* Center thumbnails */
+    }
+
+    .thumbnail {
+        width: 30px;
+        height: 30px; /* Smaller thumbnails */
     }
 
     .carousel-buttons {
-        gap: 5px;
-    }
-    
-    .thumbnails {
-        flex-wrap: wrap;
+        position: static; /* Remove fixed positioning */
+        justify-content: center; /* Center buttons */
         gap: 5px;
     }
 
-    .skill-box {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-/* Small devices (portrait tablets, 576px - 768px) */
-@media (min-width: 577px) and (max-width: 768px) {
-    .left-content, .right-content {
+    .project-info {
+        width: 90%; /* Expand info box */
         max-width: 100%;
     }
-    
-    .highlight-name {
-        font-size: 2.8rem;
+
+    /* Contact Section Adjustments */
+    .contact-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
     }
 
-    .contact-button {
-        padding: 12px;
+    .contact-form, .card {
+        width: 100%; /* Full width */
+        margin: 10px 0; /* Space between elements */
     }
 
-    .skill-box {
-        width: 120px;
-        height: 120px;
-    }
-
-    .timeline-item {
-        gap: 40px;
-    }
-
-    .education-item {
-        width: 80%;
-    }
-
-    .project-info {
-        width: 60%;
-    }
-
-    .carousel-buttons {
-        padding: 5px;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px - 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
-    .first-container {
-        padding: 50px;
-    }
-
-    .second-container {
-        padding: 20px 50px;
-    }
-
-    .highlight-name {
-        font-size: 3rem;
-    }
-
-    .contact-button {
-        padding: 15px 25px;
-    }
-
-    .education-item {
-        width: 60%;
-    }
-    
-    .skill-box {
-        width: 140px;
-        height: 140px;
-    }
-
-    .project-info {
-        width: 50%;
-    }
-    
-    .carousel-buttons button {
-        padding: 15px;
+    .contact-form .input-group {
+        flex-direction: column; /* Stack inputs */
     }
 }
 
