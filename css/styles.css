@@ -499,23 +499,30 @@ html, body {
   .skills-container {
     padding: 20px;
     text-align: center;
+    font-size: 9px;
   }
+
+  .skills-container h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.5rem; /* Font size for the heading */
+    }
 
   /* Make skill boxes smaller */
   .skill-box {
+    font-size: 9px;
     width: 45%; /* Reduce width for better fit */
     margin: 10px auto; /* Center the boxes and add space */
   }
 
   /* Reduce font size for skill text */
   .skill-box h3 {
-    font-size: 16px;
+    font-size: 12px;
     padding: 10px 0; /* Ensure spacing inside boxes */
   }
 
   /* Adjust the paragraph text */
   .skills-container p {
-    font-size: 14px; /* Make it smaller for mobile readability */
+    font-size: 11px; /* Make it smaller for mobile readability */
     margin-bottom: 20px; /* Ensure enough space below paragraph */
   }
 
