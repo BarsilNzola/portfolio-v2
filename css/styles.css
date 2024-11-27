@@ -149,7 +149,6 @@ html, body {
 .second-container {
     background-color: #F4A261; /* Gold */
     color: #1D3557; /* Navy Blue */
-    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,7 +189,9 @@ html, body {
     background-color: #1D3557; /* Navy Blue */
     color: #F4A261;
     font-family: 'Poppins', sans-serif;
-    width: 100px;
+    flex: 0 1 calc(25% - 20px); /* 4 columns: each box takes up 25% of the row minus the gap */
+    max-width: calc(25% - 20px); /* Ensures no overflow */
+    margin-bottom: 20px; /* Space between rows */
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -205,8 +206,8 @@ html, body {
 }
 
 .skill-box img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
 }
 
@@ -515,10 +516,10 @@ html, body {
   }
 
   /* Reduce font size for skill text */
-  .skill-box h3 {
-    font-size: 12px;
-    padding: 10px 0; /* Ensure spacing inside boxes */
-  }
+  .skill-box {
+    flex: 0 1 calc(33.33% - 20px); /* 3 columns: each box takes up 33.33% */
+    max-width: calc(33.33% - 20px);
+    }
 
   /* Adjust the paragraph text */
   .skills-container p {
