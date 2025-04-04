@@ -149,7 +149,6 @@ html, body {
 .second-container {
     background-color: #F4A261; /* Gold */
     color: #1D3557; /* Navy Blue */
-    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,7 +189,9 @@ html, body {
     background-color: #1D3557; /* Navy Blue */
     color: #F4A261;
     font-family: 'Poppins', sans-serif;
-    width: 100px;
+    flex: 0 1 calc(25% - 20px); /* 4 columns: each box takes up 25% of the row minus the gap */
+    max-width: calc(25% - 20px); /* Ensures no overflow */
+    margin-bottom: 20px; /* Space between rows */
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -205,8 +206,8 @@ html, body {
 }
 
 .skill-box img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
     margin-bottom: 10px;
 }
 
@@ -264,7 +265,7 @@ html, body {
     transform: translateX(-50%);
     width: 60px;
     height: 60px;
-    margin-top: 30px;
+    margin-top: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,13 +281,14 @@ html, body {
 .education-item {
     width: 40%;
     max-width: 500px; /* Optional: constrain max width */
-    padding: 20px;
-    margin-bottom: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
     background-color: #F4A261; /* Gold */
     border-radius: 10px;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
     color: #1D3557; /* Navy Blue */
+    font-size: 1.0rem;
     position: relative;
     z-index: 2;
     box-sizing: border-box; /* Ensures padding is included within the width */
@@ -430,15 +432,247 @@ html, body {
     border-color: #F4A261; /* Gold */
 }
 
+/* ===== Blog Section ===== */
+#blog {
+    background-color: #F4A261; /* Gold */
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+  
+.blog-section h2 {
+    color: #1D3557; /* Navy Blue */
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(244, 162, 97, 0.3); /* Matching your glow effect */
+}
+  
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.post-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    border: 2px solid rgba(244, 162, 97, 0.3); /* Gold border */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Matching your card shadow */
+}
+  
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-color: #F4A261;
+}
+  
+.post-card h3 {
+    color: #FFD700; /* Bright gold */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+  
+.post-card p {
+    color: #E2E8F0; /* Light gray */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+  
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #F4A261;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(244, 162, 97, 0.3);
+    padding-top: 15px;
+}
+  
+/* Admin Area */
+#blog-admin {
+    background: rgba(29, 53, 87, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto 0;
+    max-width: 800px;
+    border: 2px solid #F4A261;
+}
+  
+#blog-admin h3 {
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+  
+#post-form input,
+#post-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #F4A261;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+  
+#post-form textarea {
+    min-height: 200px;
+    resize: vertical;
+}
+  
+#post-form button {
+    background-color: #F4A261;
+    color: #1D3557;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+  
+#post-form button:hover {
+    background-color: #FFD700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(244, 162, 97, 0.4);
+}
+  
+/* Login Button */
+#google-login, #logout-btn {
+    background-color: #F4A261;
+    color: #1D3557;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+  
+#google-login:hover, #logout-btn:hover {
+    background-color: #FFD700;
+}
+
+/* ===== Apps Section ===== */
+.apps-section {
+    padding: 60px 20px;
+    background-color: #1D3557; /* Matching your navy blue */
+    height: 100vh;
+    color: #F4A261; /* Gold text */
+    text-align: center;
+}
+  
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.app-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+  
+.app-card:hover {
+    transform: translateY(-5px);
+}
+  
+.app-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+  
+.app-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+  
+.download-btn, .source-code {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+  
+.download-btn {
+    background-color: #F4A261; /* Gold */
+    color: #1D3557; /* Navy blue */
+}
+  
+.download-btn:hover {
+    background-color: #FFD700; /* Brighter gold */
+}
+  
+.source-code {
+    background-color: #333;
+    color: white;
+}
+  
+.source-code:hover {
+    background-color: #444;
+}
+
 .contact-container {
+    padding: 20px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #F4A261; /* Gold */
+    box-sizing: border-box;
+}
+
+/* ===== Contact Section Header ===== */
+.contact-container .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+  
+.contact-container .section-header h2 {
+    color: #1D3557; /* Navy blue */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+  
+.contact-container .section-header h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #1D3557; /* Navy blue */
+    margin: 15px auto;
+}
+  
+.contact-container .section-subtitle {
+    color: #E2E8F0; /* Light gray */
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.contact-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    padding: 50px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #1D3557; /* Navy Blue */
+    width: 100%;
 }
 
 .card {
@@ -446,20 +680,20 @@ html, body {
     max-width: 300px;
     margin: auto;
     text-align: center;
-  }
+}
 
 .contact-form {
     width: 45%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    color: #F4A261; /* Gold */
+    color: #1D3557; /* Navy blue */
 }
 
 .contact-form h2 {
     margin-bottom: 20px;
     font-size: 1.8rem;
-    color: #F4A261; /* Gold */
+    color: #1D3557; /* Navy blue */
 }
 
 .contact-form label {
@@ -496,35 +730,35 @@ html, body {
 /* Media query for small screens, adjust for devices with max width 768px */
 @media only screen and (max-width: 768px) {
    /* Adjust the skills container */
-  .skills-container {
-    padding: 20px;
-    text-align: center;
-    font-size: 9px;
-  }
-
-  .skills-container h2 {
-    margin-bottom: 10px; /* Space below the heading */
-    font-size: 1.5rem; /* Font size for the heading */
+    .skills-container {
+        padding: 20px;
+        text-align: center;
+        font-size: 9px;
     }
 
-  /* Make skill boxes smaller */
-  .skill-box {
-    font-size: 9px;
-    width: 45%; /* Reduce width for better fit */
-    margin: 10px auto; /* Center the boxes and add space */
-  }
+    .skills-container h2 {
+        margin-bottom: 10px; /* Space below the heading */
+        font-size: 1.5rem; /* Font size for the heading */
+    }
 
-  /* Reduce font size for skill text */
-  .skill-box h3 {
-    font-size: 12px;
-    padding: 10px 0; /* Ensure spacing inside boxes */
-  }
+    /* Make skill boxes smaller */
+    .skill-box {
+        font-size: 9px;
+        width: 45%; /* Reduce width for better fit */
+        margin: 10px auto; /* Center the boxes and add space */
+    }
 
-  /* Adjust the paragraph text */
-  .skills-container p {
-    font-size: 11px; /* Make it smaller for mobile readability */
-    margin-bottom: 20px; /* Ensure enough space below paragraph */
-  }
+    /* Reduce font size for skill text */
+    .skill-box h3 {
+        font-size: 12px;
+        padding: 10px 0; /* Ensure spacing inside boxes */
+    }
+
+    /* Adjust the paragraph text */
+    .skills-container p {
+        font-size: 11px; /* Make it smaller for mobile readability */
+        margin-bottom: 20px; /* Ensure enough space below paragraph */
+    }
 
     /* Education container adjustments */
     .education-container {
@@ -561,84 +795,99 @@ html, body {
 
    /* Portfolio Container Styles */
     .portfolio-container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements horizontally */
-    padding: 20px; /* Add padding for spacing */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center elements horizontally */
+        padding: 20px; /* Add padding for spacing */
     }
 
     /* Adjusting the carousel image */
     .portfolio-carousel {
-    width: 100%; /* Full width */
-    max-width: 600px; /* Limit max width for mobile */
-    height: auto; /* Maintain aspect ratio */
+        width: 100%; /* Full width */
+        max-width: 600px; /* Limit max width for mobile */
+        height: auto; /* Maintain aspect ratio */
     }
 
     /* Thumbnails */
     .thumbnail-container {
-    display: flex;
-    justify-content: center; /* Center thumbnails */
-    margin-top: 10px; /* Space above thumbnails */
+        display: flex;
+        justify-content: center; /* Center thumbnails */
+        margin-top: 10px; /* Space above thumbnails */
     }
 
     .thumbnail {
-    width: 60px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 5px; /* Space between thumbnails */
-    cursor: pointer; /* Pointer on hover */
+        width: 60px; /* Adjust size as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 5px; /* Space between thumbnails */
+        cursor: pointer; /* Pointer on hover */
     }
 
     /* Project Description */
     .project-info {
-    text-align: center; /* Center text */
-    margin-top: 10px; /* Space above description */
-    font-size: 14px; /* Adjust font size for readability */
-    padding: 0 10px; /* Add some padding for better visibility */
+        text-align: center; /* Center text */
+        margin-top: 10px; /* Space above description */
+        font-size: 14px; /* Adjust font size for readability */
+        padding: 0 10px; /* Add some padding for better visibility */
     }
 
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+      
+    #blog-admin {
+        padding: 20px;
+    }
+      
+    .post-card {
+        padding: 20px;
+    }
 
+    .apps-grid {
+        grid-template-columns: 1fr;
+    }
+    
     /* Contact Container */
     .contact-container {
-    padding: 20px; /* Add padding to the container */
-    overflow: hidden; /* Prevent overflow */
+        padding: 20px; /* Add padding to the container */
+        overflow: hidden; /* Prevent overflow */
     }
 
     /* Contact Card */
     .contact-card {
-    max-width: 300px; /* Set a max width for the contact card */
-    margin: auto; /* Center the card */
-    padding: 10px; /* Add some padding inside */
-    background-color: #ffffff; /* Card background color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        max-width: 300px; /* Set a max width for the contact card */
+        margin: auto; /* Center the card */
+        padding: 10px; /* Add some padding inside */
+        background-color: #ffffff; /* Card background color */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 
     /* Contact Form */
     .contact-form {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    max-width: 100%; /* Ensure it fits within the container */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        max-width: 100%; /* Ensure it fits within the container */
     }
 
     /* Input Fields */
     .contact-form input, 
     .contact-form textarea {
-    width: 100%; /* Full width for all fields */
-    padding: 10px; /* Add padding */
-    margin-bottom: 10px; /* Space between inputs */
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 5px; /* Rounded corners */
+        width: 100%; /* Full width for all fields */
+        padding: 10px; /* Add padding */
+        margin-bottom: 10px; /* Space between inputs */
+        border: 1px solid #ccc; /* Border for inputs */
+        border-radius: 5px; /* Rounded corners */
     }
 
     /* Submit Button */
     .contact-form button {
-    align-self: flex-start; /* Align button to the left */
-    padding: 10px 20px; /* Button padding */
-    background-color: #4CAF50; /* Button color */
-    color: white; /* Text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
+        align-self: flex-start; /* Align button to the left */
+        padding: 10px 20px; /* Button padding */
+        background-color: #4CAF50; /* Button color */
+        color: white; /* Text color */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer on hover */
     }
 
 

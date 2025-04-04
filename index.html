@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/barsil.png" type="image/png"> 
+    <link rel="icon" href="images/barsil.png" type="image/png">
+    <script src="env.js"></script> 
 	<title>Barsil Odiwuor Ochola</title>
 </head>
 <body>
@@ -13,10 +14,13 @@
         <nav class="navbar">
             <a href="#home">HOME</a>
             <a href="#about">ABOUT</a>
+            <a href="#blog">BLOG</a>
             <a href="#contact">CONTACT</a>
+            <button id="google-login" class="auth-button">Admin Login</button>
+            <button id="logout-btn" style="display: none;">Logout</button>
         </nav>
         <div class="inner-container">
-            <div id="home" class="first-container">
+            <section id="home" class="first-container">
                 <div class="left-content">
                     <h1>I'm <span class="highlight-name">Barsil Ochola</span>, Web and Android Developer.</h1>
                     <p><em>Aquila no captat muscas</em></p>
@@ -33,8 +37,8 @@
                         </div>
                     </div>                   
                 </div>
-            </div>
-            <div id="about" class="second-container">
+            </section>
+            <section id="about" class="second-container">
                 <h2>ABOUT</h2>
                 <p>I am an upcoming web and Android developer, currently self-learning Cyber Security. I strive to continuously improve my skills through practice and dedication, aiming to deliver the best in every project I undertake.</p>
                 <h3>MY SKILLS</h3>
@@ -71,9 +75,25 @@
                         <img src="images/nmap.png" alt="Nmap Logo">
                         <span>Nmap</span>
                     </div>
+                    <div class="skill-box">
+                        <img src="images/python.png" alt="Python Logo">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-box">
+                        <img src="images/django.png" alt="Django Logo">
+                        <span>Django</span>
+                    </div>
+                    <div class="skill-box">
+                        <img src="images/dart.png" alt="Dart Logo">
+                        <span>Dart</span>
+                    </div>
+                    <div class="skill-box">
+                        <img src="images/flutter.png" alt="Flutter Logo">
+                        <span>Flutter</span>
+                    </div>
                 </div>  
-            </div>
-            <div class="education-container">
+            </section>
+            <section class="education-container">
                 <h2>EDUCATION BACKGROUND</h2>
                 <div class="timeline">
                     <div class="timeline-line"></div>
@@ -104,8 +124,8 @@
                         Download My CV
                     </a>
                 </div>
-            </div>
-            <div class="portfolio-container">
+            </section>
+            <section class="portfolio-container">
                 <div class="portfolio-heading">PORTFOLIO</div>
                 <div class="carousel">
                     <div class="carousel-image">
@@ -134,38 +154,85 @@
                         <img src="images/knights.PNG" alt="Thumbnail 4">
                     </div>
                 </div>
-            </div>
-            <div id="contact" class="contact-container">
-                <div class="card">
-                <img src="images/barsil.png" style="width: 100%;">
-                <h1>Barsil Odiwuor Ochola</h1>
-                <p class="title">Web Developer</p>
-                <p>Android Developer</p>
-                <div style="margin: 24px 0;">
-                    <a href="https://linkedin.com/in/barsil-odiwuor"><i class="fab fa-linkedin"></i></a>
-                    <a href="http://www.youtube.com/@theforever_knights"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/the.forever.knights/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/barsil_nzola?t=Nd_uW7zlBTZKqHAEZ8USGw&s=03"><i class="fab fa-twitter"></i></a>
-                </div>
-                </div>
-                <div class="contact-form" id="contactForm">
-                    <h2>Contact Me</h2>
-                    <form action="submit_form.php" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        
-                        <button type="submit">Send Message</button>
+            </section>
+            <!-- New Blog Section -->
+            <section id="blog" class="blog-section">
+                <h2>My Blog</h2>
+                <div id="blog-posts" class="blog-grid"></div>
+                
+                <!-- Admin Area (hidden by default) -->
+                <div id="blog-admin" style="display: none;">
+                    <h3>Create New Post</h3>
+                    <form id="post-form">
+                        <input type="text" id="post-title" placeholder="Title" required>
+                        <textarea id="post-content" placeholder="Write your post..." required></textarea>
+                        <button type="submit">Publish</button>
                     </form>
                 </div>
-            </div>
-             
+            </section>
+            <section id="apps" class="apps-section">
+                <h2>CRAFTED SOFTWARE</h2>
+                <div class="apps-grid">
+                  
+                    <!-- MP3 Downloader App -->
+                    <div class="app-card">
+                    <div class="app-icon">
+                      <img src="images/icon.png" alt="MP3 Downloader Icon">
+                    </div>
+                    <h3>MP3 Downloader</h3>
+                    <div class="app-links">
+                      <a href="apps/MP3DownloaderSetup.exe" class="download-btn">
+                        <i class="fas fa-download"></i> Download for Windows
+                      </a>
+                      <a href="https://github.com/BarsilNzola/mp3-downloader" target="_blank" class="source-code">
+                        <i class="fab fa-github"></i> Source Code
+                      </a>
+                    </div>
+                </div>
+              
+                  <!-- Add more app cards here as you create them -->
+                  
+                </div>
+            </section>
+            <section id="contact" class="contact-container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p class="section-subtitle">Have a project or want to connect? Reach out!</p>
+                </div>
+                <div class="contact-content">
+                    <div class="card">
+                        <img src="images/barsil.png" style="width: 100%;">
+                        <h1>Barsil Odiwuor Ochola</h1>
+                        <p class="title">Web Developer</p>
+                        <p>Android Developer</p>
+                        <div style="margin: 24px 0;">
+                            <a href="https://linkedin.com/in/barsil-odiwuor"><i class="fab fa-linkedin"></i></a>
+                            <a href="http://www.youtube.com/@theforever_knights"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/the.forever.knights/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/barsil_nzola?t=Nd_uW7zlBTZKqHAEZ8USGw&s=03"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form" id="contactForm">
+                        <h2>Contact Me</h2>
+                        <form action="submit_form.php" method="POST">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>    
+            </section>   
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="js/portfolio.js"></script>
 </body>
