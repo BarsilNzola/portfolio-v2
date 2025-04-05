@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "firebase": "^11.5.0"
+  },
+
+  "scripts": {
+  "build": "node build-env.js && cp -r src/* public/"
   }
 }
