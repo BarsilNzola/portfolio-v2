@@ -70,17 +70,30 @@ html, body {
 /* Left Content */
 .left-content {
     max-width: 50%;
+    padding: 20px;
 }
 
 .left-content h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Base size */
     margin-bottom: 20px;
+    line-height: 1.3;
 }
 
 .highlight-name {
-    font-size: 3rem;
-    color: #FFD700; /* Bright Gold */
+    font-size: inherit; /* Match parent size */
+    color: #FFD700;
+}
+
+.left-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .contact-button {
@@ -96,13 +109,6 @@ html, body {
 .contact-button:hover {
     background-color: #FFD700; /* Bright Gold */
     color: #1D3557; /* Navy Blue */
-}
-
-/* Add to your CSS */
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
 }
 
 .portfolio-button {
@@ -268,111 +274,6 @@ html, body {
     margin-bottom: 20px; /* Space between rows */
 }
 
-.education-container {
-    background-color: #1D3557; /* Navy Blue */
-    color: #F4A261; /* Gold */
-    padding: 50px 20px;
-    height: 100vh; /* Full viewport height */
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Prevents overflow */
-    box-sizing: border-box;
-}
-
-.timeline {
-    position: relative;
-    width: 90%; /* Constrain width to prevent overflow */
-    max-width: 1200px; /* Optional: max width for larger screens */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden; /* Prevents overflow */
-}
-
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background-color: #F4A261; /* Gold */
-    z-index: 1;
-}
-
-.timeline-item {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    align-items: center; /* Centers the year vertically */
-    justify-content: space-between; /* Adjust as needed for spacing */
-}
-
-.year {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    margin-top: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #FFD700; /* Bright Gold */
-    background-color: #1D3557; /* Navy Blue */
-    border-radius: 50%;
-    z-index: 2;
-    border: 3px solid #F4A261;
-}
-
-.education-item {
-    width: 40%;
-    max-width: 500px; /* Optional: constrain max width */
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #F4A261; /* Gold */
-    border-radius: 10px;
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    color: #1D3557; /* Navy Blue */
-    font-size: 1.0rem;
-    position: relative;
-    z-index: 2;
-    box-sizing: border-box; /* Ensures padding is included within the width */
-}
-
-.education-item.left {
-    align-self: flex-start;
-    text-align: right;
-    margin-right: auto;
-    transform: translateX(-10%);
-}
-
-.education-item.right {
-    align-self: flex-end;
-    text-align: left;
-    margin-left: auto;
-    transform: translateX(10%);
-}
-
-.cv-download {
-    margin-top: 30px;
-}
-
-.download-button {
-    background-color: #FFD700; /* Bright Gold */
-    color: #1D3557; /* Navy Blue */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-
 .services-container {
     background-color: #1D3557;
     color: #F4A261;
@@ -525,15 +426,16 @@ html, body {
 
 .project-info {
     position: absolute;
-    bottom: 70px;
     left: 20px;
-    color: #F4A261; /* Gold */
-    font-family: 'Poppins', sans-serif;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    width: 300px; /* Fixed width */
-    max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
+    bottom: 70px;
+    background: rgba(29, 53, 87, 0.9); /* More opaque background */
+    color: #F4A261;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    max-width: 400px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .carousel-buttons {
@@ -553,6 +455,19 @@ html, body {
     cursor: pointer;
 }
 
+.project-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+    line-height: 1.3;
+}
+
+.project-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
 .project-features {
     margin: 15px 0;
     padding-left: 20px;
@@ -561,12 +476,24 @@ html, body {
 .project-features li {
     margin-bottom: 8px;
     position: relative;
+    font-size: 0.9rem;
 }
 
 .project-features li:before {
-    content: "✓";
+    content: "▹";
     color: #FFD700;
-    margin-right: 10px;
+    position: absolute;
+    left: -15px;
+}
+
+.project-cta {
+    display: inline-block;
+    margin-top: 15px;
+    color: #FFD700;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 3px;
 }
 
 .project-result {
@@ -575,15 +502,6 @@ html, body {
     border-radius: 5px;
     margin: 15px 0;
     font-style: italic;
-}
-
-.project-cta {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 10px;
-    border-bottom: 1px dashed #FFD700;
 }
 
 .thumbnails {
@@ -940,6 +858,14 @@ html, body {
 
 /* Media query for small screens, adjust for devices with max width 768px */
 @media only screen and (max-width: 768px) {
+    .left-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .left-content p {
+        font-size: 1rem;
+    }
+
    /* Adjust the skills container */
     .skills-container {
         padding: 20px;
@@ -971,50 +897,22 @@ html, body {
         margin-bottom: 20px; /* Ensure enough space below paragraph */
     }
 
-    .services-grid {
-        flex-direction: column;
-        align-items: center;
+    .services-container {
+        padding: 50px 20px;
     }
     
-    .service-card {
-        max-width: 100%;
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
     }
     
     .service-card.featured {
         transform: none;
+        order: -1; /* Bring featured card to top */
     }
-
-    /* Education container adjustments */
-    .education-container {
-        padding: 15px 10px; /* Reduce padding for a more compact layout */
-    }
-
-    .education-item.left p, .education-item.right p {
-        font-size: 9px; /* Reduce the font size of the paragraphs inside left and right items */
-    }
-
-    .education-year {
-        width: 50px;
-        height: 50px;
-        font-size: 0.9rem; /* Reduce the size of the year circles */
-        line-height: 50px;
-    }
-
-    .education-line {
-        width: 2px; /* Keep the timeline line thin */
-        left: 50%; /* Center the line properly */
-        transform: translateX(-50%);
-    }
-
-    .education-box p {
-        font-size: 0.9rem; /* Reduce the font size inside the boxes */
-    }
-
-    /* Additional adjustments if necessary */
-    .education-heading {
-        font-size: 1.5rem; /* Adjust the heading size for better display on mobile */
-        text-align: center;
-        margin-bottom: 20px;
+    
+    .service-icon {
+        font-size: 2rem;
     }
 
    /* Portfolio Container Styles */
@@ -1048,10 +946,20 @@ html, body {
 
     /* Project Description */
     .project-info {
-        text-align: center; /* Center text */
-        margin-top: 10px; /* Space above description */
-        font-size: 14px; /* Adjust font size for readability */
-        padding: 0 10px; /* Add some padding for better visibility */
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 20px !important;
+        width: auto !important;
+        max-width: none !important;
+        margin: 0;
+    }
+    
+    .project-info h2 {
+        font-size: 1.3rem;
+    }
+    
+    .project-features li {
+        font-size: 0.85rem;
     }
 
     .blog-grid {
