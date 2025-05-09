@@ -98,6 +98,28 @@ html, body {
     color: #1D3557; /* Navy Blue */
 }
 
+/* Add to your CSS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.portfolio-button {
+    background-color: transparent;
+    color: #F4A261;
+    padding: 10px 20px;
+    border: 2px solid #F4A261;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.portfolio-button:hover {
+    background-color: rgba(244, 162, 97, 0.2);
+}
+
 /* Right Content */
 .right-content {
     position: relative;
@@ -183,6 +205,35 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px; /* Space between skill boxes */
+}
+
+.skills-category {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.skills-category h4 {
+    color: #FFD700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.skills-category h4:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #FFD700;
+    margin: 10px auto;
+}
+
+.skills-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 .skill-box {
@@ -322,6 +373,104 @@ html, body {
     font-size: 1.2rem;
 }
 
+.services-container {
+    background-color: #1D3557;
+    color: #F4A261;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #F4A261;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 350px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card.featured {
+    transform: scale(1.05);
+    border-color: #FFD700;
+    box-shadow: 0 10px 25px rgba(244, 162, 97, 0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(244, 162, 97, 0.4);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-card .price {
+    font-weight: bold;
+    color: #F4A261;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.service-card ul {
+    text-align: left;
+    margin: 25px 0;
+    padding-left: 20px;
+}
+
+.service-card ul li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #F4A261;
+    color: #1D3557;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #FFD700;
+    transform: translateY(-3px);
+}
+
+.service-cta {
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
+.service-cta a {
+    color: #FFD700;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFD700;
+}
+
 .download-button:hover {
     background-color: #F4A261; /* Gold */
     color: #1D3557; /* Navy Blue */
@@ -402,6 +551,39 @@ html, body {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.project-features {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.project-features li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.project-features li:before {
+    content: "✓";
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+.project-result {
+    background: rgba(244, 162, 97, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.project-cta {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 1px dashed #FFD700;
 }
 
 .thumbnails {
@@ -668,6 +850,35 @@ html, body {
     font-style: italic;
 }
 
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.contact-method {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(244, 162, 97, 0.3);
+}
+
+.contact-method:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.contact-method i {
+    font-size: 1.2rem;
+}
+
 .contact-content {
     display: flex;
     justify-content: space-between;
@@ -758,6 +969,19 @@ html, body {
     .skills-container p {
         font-size: 11px; /* Make it smaller for mobile readability */
         margin-bottom: 20px; /* Ensure enough space below paragraph */
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card {
+        max-width: 100%;
+    }
+    
+    .service-card.featured {
+        transform: none;
     }
 
     /* Education container adjustments */

@@ -14,6 +14,7 @@
         <nav class="navbar">
             <a href="#home">HOME</a>
             <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
             <a href="#blog">BLOG</a>
             <a href="#contact">CONTACT</a>
             <button id="google-login" class="auth-button">Admin Login</button>
@@ -22,9 +23,12 @@
         <div class="inner-container">
             <section id="home" class="first-container">
                 <div class="left-content">
-                    <h1>I'm <span class="highlight-name">Barsil Ochola</span>, Web and Android Developer.</h1>
-                    <p><em>Aquila no captat muscas</em></p>
-                    <button class="contact-button" onclick="location.href='#contact'">Contact Me</button>
+                    <h1>I build <span class="highlight-name">high-performance</span> digital solutions that grow businesses</h1>
+                    <p><em>Web & mobile apps designed to solve real problems</em></p>
+                    <div class="hero-buttons">
+                        <button class="contact-button" onclick="location.href='#contact'">Get Your Project Started</button>
+                        <button class="portfolio-button" onclick="location.href='#portfolio'">See My Work</button>
+                    </div>
                 </div>
                 <div class="right-content">
                     <div class="image-container">
@@ -43,55 +47,128 @@
                 <p>I am an upcoming web and Android developer, currently self-learning Cyber Security. I strive to continuously improve my skills through practice and dedication, aiming to deliver the best in every project I undertake.</p>
                 <h3>MY SKILLS</h3>
                 <div class="skills-container">
-                    <div class="skill-box">
-                        <img src="images/htmlcss.png" alt="HTML & CSS">
-                        <span>HTML & CSS</span>
+                    <div class="skills-category">
+                        <h4>Web Development</h4>
+                        <div class="skills-group">
+                            <div class="skill-box">
+                                <img src="images/htmlcss.png" alt="HTML & CSS">
+                                <span>HTML & CSS</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/javascript.png" alt="JAVASCRIPT">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/mysql.png" alt="MYSQL">
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/git.png" alt="GIT">
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/nodejs.png" alt="Node.js Logo">
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/python.png" alt="Python Logo">
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/django.png" alt="Django Logo">
+                                <span>Django</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-box">
-                        <img src="images/javascript.png" alt="JAVASCRIPT">
-                        <span>JavaScript</span>
+                    
+                    <div class="skills-category">
+                        <h4>Mobile Development</h4>
+                        <div class="skills-group">
+                            <div class="skill-box">
+                                <img src="images/flutter.png" alt="Flutter">
+                                <span>Flutter</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/dart.png" alt="Dart Logo">
+                                <span>Dart</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-box">
-                        <img src="images/mysql.png" alt="MYSQL">
-                        <span>MySQL</span>
+                    
+                    <div class="skills-category">
+                        <h4>Security Expertise</h4>
+                        <div class="skills-group">
+                            <div class="skill-box">
+                                <img src="images/kalilinux.png" alt="Kali Linux">
+                                <span>Security Testing</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/metasploit.png" alt="METASPLOIT">
+                                <span>MetaSploit</span>
+                            </div>
+                            <div class="skill-box">
+                                <img src="images/nmap.png" alt="Nmap Logo">
+                                <span>Nmap</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-box">
-                        <img src="images/git.png" alt="GIT">
-                        <span>Git</span>
+                </div> 
+            </section>
+            
+            <section id="services" class="services-container">
+                <h2>My Development Solutions</h2>
+                <p class="section-subtitle">I don't just write code - I deliver business results through tailored digital solutions.</p>
+                
+                <div class="services-grid">
+                    <!-- Package 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Business Starter Package</h3>
+                        <p class="price">$500+</p>
+                        <ul>
+                            <li>5-page responsive website</li>
+                            <li>SEO optimization</li>
+                            <li>Contact form + analytics</li>
+                            <li>Mobile-friendly design</li>
+                            <li>7-day delivery</li>
+                        </ul>
+                        <button class="cta-button" onclick="location.href='#contact'">Get Started</button>
                     </div>
-                    <div class="skill-box">
-                        <img src="images/kalilinux.png" alt="KALILINUX">
-                        <span>Kalilinux</span>
+                    
+                    <!-- Package 2 (Featured) -->
+                    <div class="service-card featured">
+                        <div class="service-icon">💼</div>
+                        <h3>Web App Package</h3>
+                        <p class="price">$1,000+</p>
+                        <ul>
+                            <li>Custom dashboard</li>
+                            <li>User authentication</li>
+                            <li>Database integration</li>
+                            <li>API connections</li>
+                            <li>30-day support</li>
+                        </ul>
+                        <button class="cta-button" onclick="location.href='#contact'">Get Started</button>
                     </div>
-                    <div class="skill-box">
-                        <img src="images/metasploit.png" alt="METASPLOIT">
-                        <span>MetaSploit</span>
+                    
+                    <!-- Package 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">🔥</div>
+                        <h3>Premium Fullstack</h3>
+                        <p class="price">$1,500+</p>
+                        <ul>
+                            <li>Complete web/mobile solution</li>
+                            <li>Admin panel + CMS</li>
+                            <li>Payment integration</li>
+                            <li>3 months maintenance</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <button class="cta-button" onclick="location.href='#contact'">Get Started</button>
                     </div>
-                    <div class="skill-box">
-                        <img src="images/nodejs.png" alt="Node.js Logo">
-                        <span>Node.js</span>
-                    </div>
-                    <div class="skill-box">
-                        <img src="images/nmap.png" alt="Nmap Logo">
-                        <span>Nmap</span>
-                    </div>
-                    <div class="skill-box">
-                        <img src="images/python.png" alt="Python Logo">
-                        <span>Python</span>
-                    </div>
-                    <div class="skill-box">
-                        <img src="images/django.png" alt="Django Logo">
-                        <span>Django</span>
-                    </div>
-                    <div class="skill-box">
-                        <img src="images/dart.png" alt="Dart Logo">
-                        <span>Dart</span>
-                    </div>
-                    <div class="skill-box">
-                        <img src="images/flutter.png" alt="Flutter Logo">
-                        <span>Flutter</span>
-                    </div>
-                </div>  
+                </div>
+                
+                <div class="service-cta">
+                    <p>Need something custom? <a href="#contact">Let's discuss your project</a></p>
+                </div>
             </section>
             <section class="education-container">
                 <h2>EDUCATION BACKGROUND</h2>
@@ -196,8 +273,16 @@
             </section>
             <section id="contact" class="contact-container">
                 <div class="section-header">
-                    <h2>Get In Touch</h2>
-                    <p class="section-subtitle">Have a project or want to connect? Reach out!</p>
+                    <h2>Ready to Start Your Project?</h2>
+                    <p class="section-subtitle">Get in touch and let's discuss how I can help bring your vision to life</p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/+254715135257" class="contact-method">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                        </a>
+                        <a href="mailto:johnnzola6@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                    </div>
                 </div>
                 <div class="contact-content">
                     <div class="card">
