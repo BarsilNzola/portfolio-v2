@@ -4,6 +4,6 @@
   },
 
   "scripts": {
-  "build": "node build-env.js && cp -r src/* public/"
+  "build": "node build-env.js"
   }
 }

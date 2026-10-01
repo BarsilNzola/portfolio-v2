@@ -1,288 +1,284 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barsil Odiwuor Ochola — Web, Android & Blockchain Developer</title>
+    <meta name="description" content="Barsil Odiwuor Ochola builds web, Android and blockchain products — smart contracts in Solidity, Rust and Clarity, telemedicine and agri-tech platforms, and AI-agent tooling.">
     <link rel="icon" href="images/barsil.png" type="image/png">
-    <script src="env.js"></script> 
-	<title>Barsil Odiwuor Ochola</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <script src="env.js"></script>
 </head>
 <body>
-    <div class="main-container">
-        <nav class="navbar">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#services">SERVICES</a>
-            <a href="#blog">BLOG</a>
-            <a href="#contact">CONTACT</a>
-            <button id="google-login" class="auth-button">Admin Login</button>
-            <button id="logout-btn" style="display: none;">Logout</button>
-        </nav>
-        <div class="inner-container">
-            <section id="home" class="first-container">
-                <div class="left-content">
-                    <h1>I build <span class="highlight-name">HIGH-PERFORMANCE</span> digital solutions that grow businesses</h1>
-                    <p><em>Web & mobile apps designed to solve real problems</em></p>
-                    <div class="hero-buttons">
-                        <button class="contact-button" onclick="location.href='#contact'">Get Your Project Started</button>
-                        <button class="portfolio-button" onclick="location.href='#portfolio'">See My Work</button>
+
+    <nav class="navbar">
+        <div class="wrap">
+            <a href="#home" class="nav-mark">Barsil Ochola</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#blockchain">Blockchain</a>
+                <a href="#software">Software</a>
+                <a href="#writing">Writing</a>
+                <a href="#contact">Contact</a>
+                <a href="documents/BARSIL_CV.pdf" class="nav-cv" target="_blank">Résumé</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="wrap">
+            <div class="hero-text">
+                <p class="role">Web · Android · Blockchain</p>
+                <h1>I build products people can actually use — from clinics to smart contracts.</h1>
+                <p class="sub">I'm Barsil, a developer working across web and Android apps and smart contracts in Solidity, Rust and Clarity. Lately that's meant a Bitcoin-backed lending vault on Stacks, AI-agent payments on Injective, and telemedicine and agri-tech platforms used by real people in Kenya.</p>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">See my work</a>
+                    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="images/barsil.png" alt="Barsil Odiwuor Ochola">
+                <div class="hero-social">
+                    <a href="https://x.com/barsil_nzola" target="_blank" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com/in/barsil-odiwuor" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/BarsilNzola" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/254715135257" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="rule">
+
+    <section id="about">
+        <div class="wrap about-grid">
+            <div>
+                <p class="section-kicker">About</p>
+                <h2>Developer, builder, still learning on purpose.</h2>
+                <p class="muted" style="margin-top: 18px;">I build web and Android apps and smart contracts that solve real problems — I've shipped telemedicine and agri-tech platforms, and more recently I've been building across EVM chains, Bitcoin (via Stacks) and Injective, from DeFi vaults to AI-agent payments to tamper-proof frontends on IPFS. I'm also teaching myself penetration testing on the side.</p>
+            </div>
+            <div>
+                <div class="skills-category">
+                    <h4>Web</h4>
+                    <div class="skills-group">
+                        <div class="skill-box"><img src="images/htmlcss.png" alt=""><span>HTML &amp; CSS</span></div>
+                        <div class="skill-box"><img src="images/javascript.png" alt=""><span>JavaScript</span></div>
+                        <div class="skill-box"><img src="images/nodejs.png" alt=""><span>Node.js</span></div>
+                        <div class="skill-box"><img src="images/python.png" alt=""><span>Python</span></div>
+                        <div class="skill-box"><img src="images/django.png" alt=""><span>Django</span></div>
+                        <div class="skill-box"><img src="images/mysql.png" alt=""><span>MySQL</span></div>
+                        <div class="skill-box"><img src="images/git.png" alt=""><span>Git</span></div>
                     </div>
                 </div>
-                <div class="right-content">
-                    <div class="image-container">
-                        <img src="images/barsil.png" alt="Barsil Ochola" class="profile-image">
-                        <div class="social-icons">
-                            <a href="https://x.com/barsil_nzola?t=Nd_uW7zlBTZKqHAEZ8USGw&s=03" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                            <a href="https://linkedin.com/in/barsil-odiwuor" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://github.com/BarsilNzola?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://wa.me/+254715135257" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>                   
-                </div>
-            </section>
-            <section id="about" class="second-container">
-                <h2>ABOUT</h2>
-                <p>I am an upcoming web and Android developer, currently self-learning Cyber Security. I strive to continuously improve my skills through practice and dedication, aiming to deliver the best in every project I undertake.</p>
-                <h3>MY SKILLS</h3>
-                <div class="skills-container">
-                    <div class="skills-category">
-                        <h4>Web Development</h4>
-                        <div class="skills-group">
-                            <div class="skill-box">
-                                <img src="images/htmlcss.png" alt="HTML & CSS">
-                                <span>HTML & CSS</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/javascript.png" alt="JAVASCRIPT">
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/mysql.png" alt="MYSQL">
-                                <span>MySQL</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/git.png" alt="GIT">
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/nodejs.png" alt="Node.js Logo">
-                                <span>Node.js</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/python.png" alt="Python Logo">
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/django.png" alt="Django Logo">
-                                <span>Django</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-category">
-                        <h4>Mobile Development</h4>
-                        <div class="skills-group">
-                            <div class="skill-box">
-                                <img src="images/flutter.png" alt="Flutter">
-                                <span>Flutter</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/dart.png" alt="Dart Logo">
-                                <span>Dart</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-category">
-                        <h4>Security Expertise</h4>
-                        <div class="skills-group">
-                            <div class="skill-box">
-                                <img src="images/kalilinux.png" alt="Kali Linux">
-                                <span>Security Testing</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/metasploit.png" alt="METASPLOIT">
-                                <span>MetaSploit</span>
-                            </div>
-                            <div class="skill-box">
-                                <img src="images/nmap.png" alt="Nmap Logo">
-                                <span>Nmap</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </section>
-            
-            <section id="services" class="services-container">
-                <h2>My Development Solutions</h2>
-                <p class="section-subtitle">I don't just write code - I deliver business results through tailored digital solutions.</p>
-                
-                <div class="services-grid">
-                    <!-- Package 1 -->
-                    <div class="service-card">
-                        <div class="service-icon">🚀</div>
-                        <h3>Business Starter Package</h3>
-                        <p class="price">$500+</p>
-                        <ul>
-                            <li>5-page responsive website</li>
-                            <li>SEO optimization</li>
-                            <li>Contact form + analytics</li>
-                            <li>Mobile-friendly design</li>
-                            <li>7-day delivery</li>
-                        </ul>
-                        <button class="cta-button" onclick="location.href='#contact'">Get Started</button>
-                    </div>
-                    
-                    <!-- Package 2 (Featured) -->
-                    <div class="service-card featured">
-                        <div class="service-icon">💼</div>
-                        <h3>Web App Package</h3>
-                        <p class="price">$1,000+</p>
-                        <ul>
-                            <li>Custom dashboard</li>
-                            <li>User authentication</li>
-                            <li>Database integration</li>
-                            <li>API connections</li>
-                            <li>30-day support</li>
-                        </ul>
-                        <button class="cta-button" onclick="location.href='#contact'">Get Started</button>
-                    </div>
-                    
-                    <!-- Package 3 -->
-                    <div class="service-card">
-                        <div class="service-icon">🔥</div>
-                        <h3>Premium Fullstack</h3>
-                        <p class="price">$1,500+</p>
-                        <ul>
-                            <li>Complete web/mobile solution</li>
-                            <li>Admin panel + CMS</li>
-                            <li>Payment integration</li>
-                            <li>3 months maintenance</li>
-                            <li>Priority support</li>
-                        </ul>
-                        <button class="cta-button" onclick="location.href='#contact'">Get Started</button>
+                <div class="skills-category">
+                    <h4>Mobile</h4>
+                    <div class="skills-group">
+                        <div class="skill-box"><img src="images/flutter.png" alt=""><span>Flutter</span></div>
+                        <div class="skill-box"><img src="images/dart.png" alt=""><span>Dart</span></div>
                     </div>
                 </div>
-                
-                <div class="service-cta">
-                    <p>Need something custom? <a href="#contact">Let's discuss your project</a></p>
+                <div class="skills-category">
+                    <h4>Blockchain</h4>
+                    <div class="skills-group">
+                        <div class="skill-box"><i class="fa-brands fa-ethereum"></i><span>Solidity</span></div>
+                        <div class="skill-box"><i class="fa-brands fa-rust"></i><span>Rust</span></div>
+                        <div class="skill-box"><i class="fa-solid fa-file-contract"></i><span>Clarity (Stacks)</span></div>
+                        <div class="skill-box"><i class="fa-brands fa-bitcoin"></i><span>sBTC</span></div>
+                    </div>
                 </div>
-            </section>
-            <section class="portfolio-container">
-                <div class="portfolio-heading">PORTFOLIO</div>
-                <div class="carousel">
+                <div class="skills-category">
+                    <h4>Security — learning</h4>
+                    <div class="skills-group">
+                        <div class="skill-box learning"><img src="images/kalilinux.png" alt=""><span>Kali Linux</span></div>
+                        <div class="skill-box learning"><img src="images/metasploit.png" alt=""><span>Metasploit</span></div>
+                        <div class="skill-box learning"><img src="images/nmap.png" alt=""><span>Nmap</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="on-ink">
+        <div class="wrap">
+            <div class="section-header">
+                <p class="section-kicker" style="color: var(--muted-on-ink);">Selected work</p>
+                <h2>Products built for real users, not demos.</h2>
+            </div>
+            <div class="work-carousel">
+                <div>
                     <div class="carousel-image">
-                        <img src="images/medanywhere.png" alt="Project Image">
-                        <div class="project-info">
-                            <h2>MEDANYWHERE</h2>
-                            <p>Telemedicine Platform</p>
-                        </div>
+                        <img src="images/medanywhere.png" alt="Project screenshot">
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumbnail active"><img src="images/medanywhere.png" alt="MedAnywhere thumbnail"></div>
+                        <div class="thumbnail"><img src="images/cloudshamba.PNG" alt="CloudShamba thumbnail"></div>
+                        <div class="thumbnail"><img src="images/skill-match.png" alt="Skill-Match thumbnail"></div>
                     </div>
                     <div class="carousel-buttons">
-                        <button id="prev-button"><i class="fas fa-chevron-left"></i></button>
-                        <button id="next-button"><i class="fas fa-chevron-right"></i></button>
+                        <button id="prev-button" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+                        <button id="next-button" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
                     </div>
                 </div>
-                <div class="thumbnails">
-                    <div class="thumbnail active">
-                        <img src="images/medanywhere.png" alt="Thumbnail 1">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="images/cloudshamba.PNG" alt="Thumbnail 2">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="images/skill-match.png" alt="Thumbnail 3">
-                    </div>
-                </div>
-            </section>
-            <!-- New Blog Section -->
-            <section id="blog" class="blog-section">
-                <h2>My Blog</h2>
-                <div id="blog-posts" class="blog-grid"></div>
-                
-                <!-- Admin Area (hidden by default) -->
-                <div id="blog-admin" style="display: none;">
-                    <h3>Create New Post</h3>
-                    <form id="post-form">
-                        <input type="text" id="post-title" placeholder="Title" required>
-                        <textarea id="post-content" placeholder="Write your post..." required></textarea>
-                        <button type="submit">Publish</button>
-                    </form>
-                </div>
-            </section>
-            <section id="apps" class="apps-section">
-                <h2>CRAFTED SOFTWARE</h2>
-                <div class="apps-grid">
-                  
-                    <!-- MP3 Downloader App -->
-                    <div class="app-card">
-                    <div class="app-icon">
-                      <img src="images/icon.png" alt="MP3 Downloader Icon">
-                    </div>
-                    <h3>MP3 Downloader</h3>
-                    <div class="app-links">
-                      <a href="apps/MP3DownloaderSetup.exe" class="download-btn">
-                        <i class="fas fa-download"></i> Download for Windows
-                      </a>
-                      <a href="https://github.com/BarsilNzola/mp3-downloader" target="_blank" class="source-code">
-                        <i class="fab fa-github"></i> Source Code
-                      </a>
-                    </div>
-                </div>
-              
-                  <!-- Add more app cards here as you create them -->
-                  
-                </div>
-            </section>
-            <section id="contact" class="contact-container">
-                <div class="section-header">
-                    <h2>Ready to Start Your Project?</h2>
-                    <p class="section-subtitle">Get in touch and let's discuss how I can help bring your vision to life</p>
-                    <div class="contact-methods">
-                        <a href="https://wa.me/+254715135257" class="contact-method">
-                            <i class="fab fa-whatsapp"></i> WhatsApp Chat
-                        </a>
-                        <a href="mailto:johnnzola6@gmail.com" class="contact-method">
-                            <i class="fas fa-envelope"></i> Email Me
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-content">
-                    <div class="card">
-                        <img src="images/barsil.png" style="width: 100%;">
-                        <h1>Barsil Odiwuor Ochola</h1>
-                        <p class="title">Web Developer</p>
-                        <p>Android Developer</p>
-                        <div style="margin: 24px 0;">
-                            <a href="https://linkedin.com/in/barsil-odiwuor"><i class="fab fa-linkedin"></i></a>
-                            <a href="http://www.youtube.com/@theforever_knights"><i class="fab fa-youtube"></i></a>
-                            <a href="https://www.instagram.com/the.forever.knights/"><i class="fab fa-instagram"></i></a>
-                            <a href="https://x.com/barsil_nzola?t=Nd_uW7zlBTZKqHAEZ8USGw&s=03"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-form" id="contactForm">
-                        <h2>Contact Me</h2>
-                        <form action="submit_form.php" method="POST">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                            
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                            
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>    
-            </section>   
+                <div class="project-info"></div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="blockchain" class="on-ink" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="section-header">
+                <p class="section-kicker" style="color: var(--muted-on-ink);">Blockchain &amp; Web3</p>
+                <h2>Smart contracts across three ecosystems.</h2>
+                <p class="lede" style="color: var(--muted-on-ink);">Prototypes and hackathon builds — unaudited, built to show how the pieces fit together.</p>
+            </div>
+        </div>
+        <div class="chain-grid">
+            <div class="chain-card">
+                <h3>sBTC Vault</h3>
+                <p>Non-custodial, over-collateralized borrowing against sBTC on Stacks, with open liquidation.</p>
+                <div class="chain-tags">
+                    <span class="chain-tag">Clarity</span>
+                    <span class="chain-tag">Clarinet</span>
+                    <span class="chain-tag">Next.js</span>
+                </div>
+                <div class="chain-links">
+                    <a href="https://github.com/BarsilNzola/sBTC-vault" target="_blank">Code</a>
+                    <a href="https://frontend-barsils-projects.vercel.app" target="_blank" class="secondary">Demo</a>
+                </div>
+            </div>
+            <div class="chain-card">
+                <h3>WorldCupIQ</h3>
+                <p>AI-powered predictions and pay-per-use analytics on Injective, with an MCP server so AI agents can query and pay for data themselves.</p>
+                <div class="chain-tags">
+                    <span class="chain-tag">Solidity</span>
+                    <span class="chain-tag">Foundry</span>
+                    <span class="chain-tag">x402</span>
+                    <span class="chain-tag">MCP</span>
+                </div>
+                <div class="chain-links">
+                    <a href="https://github.com/BarsilNzola/worldcupiq" target="_blank">Code</a>
+                    <a href="https://worldcupiq.onrender.com/" target="_blank" class="secondary">Demo</a>
+                </div>
+            </div>
+            <div class="chain-card">
+                <h3>SafeDash</h3>
+                <p>A DAO and DeFi dashboard whose integrity you can verify yourself — deployed to IPFS, served through ENS.</p>
+                <div class="chain-tags">
+                    <span class="chain-tag">React</span>
+                    <span class="chain-tag">IPFS</span>
+                    <span class="chain-tag">ENS</span>
+                </div>
+                <div class="chain-links">
+                    <a href="https://github.com/BarsilNzola/safe-dash" target="_blank">Code</a>
+                    <a href="https://kornzo3m.pinit.eth.limo" target="_blank" class="secondary">Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="software">
+        <div class="wrap">
+            <div class="section-header">
+                <p class="section-kicker">Crafted software</p>
+                <h2>Small tools, shipped end to end.</h2>
+            </div>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon"><img src="images/icon.png" alt="MP3 Downloader icon"></div>
+                    <h3>MP3 Downloader</h3>
+                    <p class="muted" style="font-size: 14px;">A lightweight Windows desktop app for saving audio for offline listening.</p>
+                    <div class="app-links">
+                        <a href="apps/MP3DownloaderSetup.exe" class="download-btn"><i class="fas fa-download"></i> Download for Windows</a>
+                        <a href="https://github.com/BarsilNzola/mp3-downloader" target="_blank" class="source-code"><i class="fab fa-github"></i> Source code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="rule">
+
+    <section id="writing">
+        <div class="wrap">
+            <div class="blog-head">
+                <div>
+                    <p class="section-kicker">Writing</p>
+                    <h2>Notes on what I'm building.</h2>
+                </div>
+                <div>
+                    <button id="google-login" class="auth-button">Admin</button>
+                    <button id="logout-btn" class="auth-button" style="display: none;">Logout</button>
+                </div>
+            </div>
+            <div id="blog-posts" class="blog-grid">
+                <p class="blog-empty">No posts yet — check back soon.</p>
+            </div>
+
+            <div id="blog-admin" style="display: none;">
+                <h3>New post</h3>
+                <form id="post-form">
+                    <input type="text" id="post-title" placeholder="Title" required>
+                    <textarea id="post-content" placeholder="Write your post..." required></textarea>
+                    <button type="submit">Publish</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="on-ink">
+        <div class="wrap contact-grid">
+            <div>
+                <p class="section-kicker" style="color: var(--muted-on-ink);">Contact</p>
+                <h2>Let's build something.</h2>
+                <p class="muted" style="margin-top: 14px;">Open to freelance work, collaborations, and conversations about web3. The fastest way to reach me is WhatsApp or email.</p>
+                <div class="contact-methods">
+                    <a href="https://wa.me/254715135257" class="contact-method" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="mailto:johnnzola6@gmail.com" class="contact-method"><i class="fas fa-envelope"></i> johnnzola6@gmail.com</a>
+                </div>
+                <div class="contact-social">
+                    <a href="https://linkedin.com/in/barsil-odiwuor" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/BarsilNzola" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/barsil_nzola" target="_blank" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="http://www.youtube.com/@theforever_knights" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>© 2026 Barsil Odiwuor Ochola</span>
+            <div class="footer-links">
+                <a href="https://github.com/BarsilNzola" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/barsil-odiwuor" target="_blank">LinkedIn</a>
+                <a href="documents/BARSIL_CV.pdf" target="_blank">Résumé</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="js/portfolio.js"></script>
 </body>
+</html>
